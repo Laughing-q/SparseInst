@@ -146,6 +146,8 @@ def test_sparseinst_speed(cfg, fp16=False):
         cfg.DATASETS.TEST[0], ("segm",), False, output_folder)
     evaluator.reset()
     model.to(device)
+    if fp16:
+        model = model.half()
     model.eval()
     data_loader = build_detection_test_loader(cfg, cfg.DATASETS.TEST[0])
     durations = []

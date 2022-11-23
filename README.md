@@ -1,3 +1,11 @@
+This fork is for model speed test.
+
+Reproduce the speed of yolov5-seg's chart:
+```bash
+./eval
+```
+
+
 <div align="center">
 <img src="assets/banner.gif">
 <br>
